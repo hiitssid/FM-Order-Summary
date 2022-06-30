@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+:root {
+  /* Primary */
+
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /* Neutral */
+
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  background: url(./images/pattern-background-desktop.svg)
+    hsla(225, 100%, 94%, 1);
+  background-repeat: repeat-x;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  height: 700px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+h1 {
+  font-weight: 900;
+}
+.description {
+  text-align: center;
+  padding: 0 75px;
+}
+
+.description,
+.plan p,
+p {
+  color: var(--desaturated-blue);
+}
+
+.description,
+.plan p {
+  font-weight: 500;
+}
+
+.plan {
+  height: 100px;
+  width: 350px;
+  background-color: var(--very-pale-blue);
+  display: flex;
+  padding: 30px 20px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+.plan h4 {
+  font-weight: 700;
+}
+.plan-pricing {
+  margin-left: -70px;
+  line-height: 30px;
+}
+
+.plan a {
+  font-weight: 700;
+  font-size: 15px;
+}
+.plan a:active {
+  text-decoration: none;
+  color: var(--desaturated-blue);
+}
+button {
+  background-color: var(--bright-blue);
+  color: #fff;
+  padding: 18px 100px;
+  border-radius: 10px;
+  font-weight: 900;
+  font-size: 15px;
+  border: none;
+  box-shadow: 0 10px 20px var(--pale-blue);
+}
+button:active {
+  background-color: hsl(245, 58%, 73%);
+  cursor: pointer;
+}
+button:hover {
+  cursor: pointer;
+}
+.cancel-button {
+  font-weight: 900;
+  font-size: 16px;
+  text-decoration: none;
+  margin-bottom: 50px;
+}
+.cancel-button:active {
+  color: var(--dark-blue);
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background: url(./images/pattern-background-mobile.svg)
+      hsla(225, 100%, 94%, 1);
+    background-repeat: repeat-x;
+  }
+}
